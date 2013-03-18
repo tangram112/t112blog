@@ -1,0 +1,82 @@
+---
+layout: index
+title: "wb://blog"
+---
+<h3>All Posts</h3>
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</ul>
+
+<h3>My Open Source Projects</h3>
+<ul class="posts">
+  <li><a href="http://github.com/wbzyl/">Github</a>
+</ul>
+
+<h3>Instalacja szablonu</h3>
+
+<ul>
+<li>Rejestrujemy się na serverze <a href="http://github.com">GitHub</a>
+  (wybieramy <b>Free Plan</b>) i logujemy się na swoim koncie.
+<li>Tworzymy nowe repozytorium o nazwie <b>TWÓJ_LOGIN.github.com</b>.
+<li>Wchodzimy na stronę <a href="http://wbzyl.github.com/">wb://blog</a>
+  skąd pobieramy archiwum ZIP lub TAR.
+<li>Rozpakowujemy archiwum, przechodzimy do utworzonego katalogu.
+</ul>
+
+<p>Przykładowo:</p>
+<pre>unzip wbzyl-jekyll-template-96be463.zip   # dla ZIP
+tar zxvf wbzyl-jekyll-template-96be463.tar.gz  # dla TAR
+cd wbzyl-jekyll-template-96be463
+</pre>
+
+<p>Następnie edytujemy te dwa <i>tasks</i> z pliku <i>Rakefile</i>
+(zamieniasz <i>wbzyl</i> na <i>TWÓJ_LOGIN</i>):</p>
+<pre>desc "Add wbzyl/wbzyl.github.com.git as remote"
+task :setup do
+  sh "git remote add github git@github.com:wbzyl/wbzyl.github.com.git"
+end
+
+desc "Deploy master branch to wbzyl.github.com master branch"
+task :deploy do
+  sh "git push github master"
+end
+</pre>
+
+<p>Po kilku minutach znajdziesz swój blog tutaj:</p>
+<pre>
+http://TWÓJ_LOGIN.github.com/
+</pre>
+
+
+<h3>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch
+named <code>gh-pages</code> to your repository to create a page
+manually. In addition to supporting regular HTML content, GitHub Pages
+support Jekyll, a simple, blog aware static site generator written by
+our own Tom Preston-Werner. Jekyll makes it easy to create site-wide
+headers and footers without having to copy them across every page. It
+also offers intelligent blog support and other advanced templating
+features.</p>
+
+<h3>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821"
+class="user-mention">@mention</a> a GitHub username to generate a link
+to their profile. The resulting <code>&lt;a&gt;</code> element will
+link to the contributor's GitHub Profile. For example: In 2007, Chris
+Wanstrath (<a href="https://github.com/defunkt"
+class="user-mention">@defunkt</a>), PJ Hyett
+(<a href="https://github.com/pjhyett"
+class="user-mention">@pjhyett</a>), and Tom Preston-Werner
+(<a href="https://github.com/mojombo"
+class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation
+at <a href="http://help.github.com/pages">http://help.github.com/pages</a>
+or contact <a href="mailto:support@github.com">support@github.com</a>
+and we’ll help you sort it out.</p>

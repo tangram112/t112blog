@@ -1,0 +1,4 @@
+markdown: redcarpet
+permalink: ":year/:month/:day/:title/"
+pygments: true
+baseurl:
