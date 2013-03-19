@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ściągawka z GFM
+title: Dobre rady dobrych wujków
 published: "3 marca 2013"
 tags: [jekyll, example]
 description: "Przykładowy post"
