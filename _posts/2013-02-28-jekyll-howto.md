@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dobre rady dobrych wujków
+title: Dobre rady dobrych wujków ( by W.Bzyl )
 published: "3 marca 2013"
 tags: [jekyll, example]
 description: "Przykładowy post"
