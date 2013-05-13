@@ -1,4 +1,4 @@
 markdown: redcarpet
 permalink: ":year/:month/:day/:title/"
 pygments: true
-baseurl: /t112blog/
+baseurl: /t112blog
