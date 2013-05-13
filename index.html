@@ -2,7 +2,7 @@
 layout: index
 title: "T112://blog"
 ---
-<h3 style="font-family:'RuzickaFreehandW01-Roma'; font-weight: bold;">All Posts</h3>
+<h3 style="font-family:'RuzickaFreehandW01-Roma'; font-weight: bold; font-size: 24px;">All Posts</h3>
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
